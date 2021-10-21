@@ -2,7 +2,7 @@ import _ from 'lodash';
 import { useState, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { bindActionCreators } from '@reduxjs/toolkit';
-import * as authActions from '../app/action';
+import * as authActions from '../app/actions';
 
 const Login = (props) => {
   const { login } = bindActionCreators(authActions, useDispatch());

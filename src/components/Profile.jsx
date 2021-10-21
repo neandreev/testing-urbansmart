@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import { useSelector, useDispatch } from 'react-redux';
 import { bindActionCreators } from '@reduxjs/toolkit';
-import * as authActions from '../app/action';
+import * as authActions from '../app/actions';
 
 const Profile = (props) => {
   const { authenticatedUser, users } = useSelector((state) => state.auth);
@@ -15,9 +15,9 @@ const Profile = (props) => {
 
   return (
     <div className="card my-2">
-      <h4 className="card-header">
+      <h1 className="card-header">
         Welcome, { authenticatedUser }
-      </h4>
+      </h1>
       <div className="card-body">
         { JSON.stringify(user, null, 2) }
       </div>
